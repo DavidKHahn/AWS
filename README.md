@@ -10,11 +10,17 @@
      - ``sls create -t aws-nodejs`` creates a new node js serverless template when ran in Terminal CLI
      - ``sls config credentials --provider aws --key ENTER_KEY_HERE --secret ENTER_SECREY_KEY_HERE`` sets permission for Serverless to access AWS Lambda functions
      - ``cd ~/.aws`` access to AWS root folder
+     - ``sls deploy`` Upload and deploy setup files to AWS Lambda server
+     - ``sls invoke --function NAME_OF_FUNCTION_HERE`` runs the function from the AWS Lambda server (not free and not recommended for use while in development)
+     - ``sls invoke local --function NAME_OF_FUNCTION_HERE`` runs the function from the AWS Lambda server locally (free and better for development purpose)
+     
  - **CloudFront:** Web server that speeds up distribution of static files (similar to CDN - Content Delivery Network, system of distributed servers). Provides automatic HTTPS for added security.
-
 
    **Useful INFO:**
    - https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage.html (Managing IAM policies)
-   - *"Every AWS Lambda function needs permission to interact with other AWS infrastructure resources within your account. These permissions are set via an AWS IAM Role which the Serverless Framework automatically creates for each Serverless Service, and is shared by all of your Functions. The Framework allows you to modify this Role or create Function-specific Roles, easily."* (Source: https://serverless.com/framework/docs/providers/aws/guide/iam/)
+   - *"Every AWS Lambda function needs permission to interact with other AWS infrastructure resources within your account. These permissions are set via an AWS IAM Role which the Serverless Framework automatically creates for each Serverless Service, and is shared by all of your Functions. The Framework allows you to modify this Role or create Function-specific Roles, easily."*  
+Source: https://serverless.com/framework/docs/providers/aws/guide/iam/
+     
+   
    
    
